@@ -8,7 +8,9 @@ import { Component } from '@angular/core';
 export class AppComponent {
 
   uploadArquivo(event) {
-    console.log(event);
+    if (event.target.files && event.target.files[0]) {
+      console.log(event);
+    }
   }
 
 }
