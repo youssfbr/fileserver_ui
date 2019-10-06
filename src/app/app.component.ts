@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'fileserver-ui';
+
+  uploadArquivo(event) {
+    console.log(event);
+  }
+
 }
