@@ -8,6 +8,8 @@ import { HttpClient } from '@angular/common/http';
 })
 export class AppComponent {
 
+  URLapi = 'http://localhost:8080/arquivos';
+
   constructor(private http: HttpClient) {}
 
   uploadArquivo(event) {
@@ -16,6 +18,9 @@ export class AppComponent {
 
       const formData = new FormData();
       formData.append('arquivo', arquivo);
+
+      this.http.post(this.URLapi, formData)
+        .subscribe(reposta => console.log('Upload OK.'));
     }
   }
 
