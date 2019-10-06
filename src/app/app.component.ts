@@ -9,7 +9,7 @@ export class AppComponent {
 
   uploadArquivo(event) {
     if (event.target.files && event.target.files[0]) {
-      console.log(event);
+      const arquivo = event.target.files[0];
     }
   }
 
